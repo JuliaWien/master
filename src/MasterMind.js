@@ -4,7 +4,6 @@ const PinColorCount = 6;
 function pickColor(rndFunction) {
     console.log("PickColor started: " + rndFunction);
     let colorNr = rndFunction();
-    colorNr -= Math.trunc(colorNr);  // 10.5 --> 0.5
     colorNr = Math.floor(colorNr * PinColorCount);   // [0.0 .. 1.0[  --> Int[0 .. 5]
     console.log("PickColor: Random completed: " + colorNr)
 
@@ -28,6 +27,7 @@ function pickColor(rndFunction) {
 
     // return PinColors.MAGENTA;
 }
+
 
 
 module.exports = {
